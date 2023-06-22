@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Website with Hover and Animation Effects</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <style>
+        /* Reset Styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Basic Styles */
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+nav ul li a {
+	color: #fff;
+	padding: 10px;
+	text-decoration: none;
+}
+
+nav ul ul {
+	display: none;
+}
+
+nav ul li:hover > ul {
+	display: inherit;
+}
+
+nav ul ul li {
+	position: relative;
+}
+
+nav ul ul ul {
+	position: absolute;
+	right: 100%;
+	top: 0;
+}
+
+.main {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 50px;
+	height: 100px;
+	width: 100px;
+	margin: 10px;
+	transition: all 0.5s ease;
+}
+
+/* Effects */
+.box:hover.translate {
+	transform: translate(50px, 50px);
+}
+
+.box:hover.rotate3d {
+	transform: rotate3d(1, 1, 1, 180deg);
+}
+
+.box:hover.rotate {
+	transform: rotate(180deg);
+}
+
+.box:hover.skew {
+	transform: skew(30deg);
+}
+
+.box:hover.opacity {
+	opacity: 0.5;
+}
+
+.box:hover.boxShadow {
+	box-shadow: 10px 10px 10px #333;
+}
+main div{
+    background-image: linear-gradient(to right, rgb(239, 115, 115) , rgb(102, 102, 255));
+}
+
+.container-img {
+			position: relative;
+			width: 1000px;
+		}
+
+		.image {
+			display: block;
+			width: 1000px;
+			height: 700px;
+			transition: 1s;
+		}
+
+		.overlay {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			opacity: 0;
+			transition: 1s;
+			background-color: rgba(0, 0, 0, 0.7);
+		}
+
+		.container-img:hover .overlay {
+			opacity: 1;
+		}
+
+		.container-img:hover .image {
+
+			transform: rotate(360deg);
+
+			/*
+				transform:scale(0.5);
+				transform:scale(1.5);
+				
+
+				transform:skew(90deg);
+				
+				transform:translate(300px,0px);
+				transform:translate(0px,400px);
+				transform:translate(300px,400px); 
+			  */
+		}
+
+		.text {
+			color: white;
+			font-size: 20px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			-o-transform: translate(-50%, -50%);
+			-moz-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			text-align: center;
+
+		}
+
+        #wwe {
+            display: flex;
+        }
+
+        #I{font-size:50px;color:red;}
+
+        .fontt i, .fontt span{
+            margin: 80px;
+            margin-left: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#"><a href="./helpingHOVER.html">font-awesome</a></a></li>
+				<li><a href="#"><a href="./task_1.html">Tast 1 (Click here)</a></a>
+                    <ul>
+                        <li><a href="#">22-06-2023
+                        </a></li>
+                    </ul>
+                </li>
+				<li><a href="#">Services</a>
+					<ul>
+						<li><a href="#">Web Design</a></li>
+						<li><a href="#">Web Development</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Contact</a>
+                    <ul>
+                        <li><a href="#">+91 99 9999 0000</a></li>
+                    </ul>
+                </li>
+			</ul>
+		</nav>
+	</header>
+<div id="wwe">
+	<main>
+		<div class="box translate">1</div>
+		<div class="box rotate3d">2</div>
+		<div class="box rotate">3</div>
+		<div class="box skew">4</div>
+		<div class="box opacity">5</div>
+		<div class="box boxShadow">6</div>
+	</main>
+
+	<div class="container-img">
+		<img src="https://www.mapsofindia.com/maps/gujarat/gujarat-index-20map.jpg" alt="Demo Image" class="image">
+
+		<div class="overlay">
+			<div class="text">
+				Gujarat
+			</div>
+		</div>
+	</div>
+    <div class="fontt">
+        <span class="fa fa-list-ul" id="I"></span><hr/>
+		<i class="fa fa-area-chart" style="font-size:25px;color:red;"></i><hr/>
+		<i class="fa fa-arrow-circle-up" style="font-size:25px;color:red;"></i><hr/>
+    </div>   
+</div>
+</body>
+</html>
